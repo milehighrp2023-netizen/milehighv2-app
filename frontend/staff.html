@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>MileHighV2 Staff Application</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body class="staff-page"><div class="cursor-glow"></div>
+<main class="page-shell">
+<header>
+  <img src="logo.png" class="logo">
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="rules.html">RULES</a>
+    <a href="applications.html">APPLICATIONS</a>
+    <a href="store.html">STORE</a>
+    <a class="discord" href="https://discord.gg/VkDJBxFme" target="_blank">DISCORD</a>
+  </nav>
+</header>
+<section class="page-panel whitelist">
+  <div class="form-head">
+    <div><h2>STAFF APPLICATION</h2><p>Apply to help support and manage MileHighV2.</p></div>
+    <div class="progress"><b>20/100</b><span><i></i></span></div>
+  </div>
+
+  <form id="staffForm" class="form-layout" data-app-type="staff">
+    <aside>
+      <button type="button" class="step-btn on" data-step="0">1 Basic Info</button>
+      <button type="button" class="step-btn" data-step="1">2 Experience</button>
+      <button type="button" class="step-btn" data-step="2">3 Staff Knowledge</button>
+      <button type="button" class="step-btn" data-step="3">4 Scenarios</button>
+      <button type="button" class="step-btn" data-step="4">5 Agreement</button>
+    </aside>
+
+    <div class="form-card">
+
+      <div class="form-step active" data-step="0">
+        <h3>1. Basic Information</h3>
+        <label>Discord Name<input name="discordName" placeholder="Example: MileHigh#0001" required></label>
+        <label>Discord User ID<input name="discordId" placeholder="Example: 433331630598389761" required></label>
+        <label>Age<input name="age" placeholder="18+" required></label>
+        <label>Timezone<input name="timezone" placeholder="Example: EST / CST / PST" required></label>
+      </div>
+
+      <div class="form-step" data-step="1">
+        <h3>2. Staff Experience</h3>
+        <label>Have you staffed on a FiveM server before?<textarea name="staffExperience" required></textarea></label>
+        <label>What commands/tools have you used before?<textarea name="staffTools" placeholder="txAdmin, Discord moderation, ticket bots, tx logs, etc." required></textarea></label>
+        <label>How many hours per week can you actively staff?<textarea name="availability" required></textarea></label>
+      </div>
+
+      <div class="form-step" data-step="2">
+        <h3>3. Staff Knowledge</h3>
+        <label>What makes a good staff member?<textarea name="goodStaff" required></textarea></label>
+        <label>How should staff handle reports without bias?<textarea name="bias" required></textarea></label>
+        <label>What is the difference between IC issues and OOC rule breaks?<textarea name="icOoc" required></textarea></label>
+      </div>
+
+      <div class="form-step" data-step="3">
+        <h3>4. Staff Scenarios</h3>
+        <label>A player reports RDM, but both sides are arguing. What do you do?<textarea name="rdmReportScenario" required></textarea></label>
+        <label>Your friend is accused of breaking rules. How do you handle it?<textarea name="friendScenario" required></textarea></label>
+        <label>A new player is confused and frustrated. How do you help them?<textarea name="newPlayerScenario" required></textarea></label>
+      </div>
+
+      <div class="form-step" data-step="4">
+        <h3>5. Agreement</h3>
+        <label class="check-line"><input type="checkbox" name="ageConfirm" required> I confirm I am 18+.</label>
+        <label class="check-line"><input type="checkbox" name="professionalConfirm" required> I agree to act professionally as staff.</label>
+        <label class="check-line"><input type="checkbox" name="abuseConfirm" required> I understand abuse of staff powers can result in removal.</label>
+        <label class="check-line"><input type="checkbox" name="truthConfirm" required> I confirm my answers are truthful.</label>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" id="prevStep" class="step-nav secondary">BACK</button>
+        <button type="button" id="nextStep" class="step-nav">NEXT ›</button>
+        <button type="submit" id="submitApplication" class="step-nav submit-hidden">SUBMIT STAFF APPLICATION</button>
+      </div>
+
+      <p id="formStatus"></p>
+    </div>
+  </form>
+</section>
+</main><script src="app.js"></script></body></html>
